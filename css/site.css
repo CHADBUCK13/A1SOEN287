@@ -52,6 +52,7 @@
 #productImage img {
     width:240px;
     height:160px;
+    object-fit: cover;
 }
 @media screen and (min-width: 1200px){
     #productImage img {
@@ -290,12 +291,7 @@ td{
     column-width: 200px;
 
 }
-h1{
-    padding-left: 2rem;
-}
-h5{
-    padding-left: 4rem;
-}
+
 #shift{
     margin-left: 2rem;
 }
