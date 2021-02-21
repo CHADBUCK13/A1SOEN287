@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Order Profile</title>
+    
+<link rel = "stylesheet" href="css/site.css">
+
+    </head>
+
+<body style="margin-top: -20px;">
+     <!--Top header for logo and user tools-->
+<nav class="navbar navbar-inverse">
+    <!--Allow content to span entire page-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Hole Foods <span><img src="images/logo.png" alt="logo.png" style="height: 1.5em;"></span></a>
+
+            <!--Show user icon as button for dropdown when viewport drops below 775px width-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#commonHeader">
+                    <span class="glyphicon glyphicon-user" style="color:white;"></span>
+            </button>                
+        </div>
+
+        <!--Show on right but when viewport drops below 775px width collapse-->
+        <div class="collapse navbar-collapse" id="commonHeader">
+            <ul class="nav navbar-nav navbar-right">                
+                <li><a href='signup.html'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>
+                <li><a href='login.html'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>                       
+            </ul>
+        </div>                   
+    </div>        
+</nav>
+
+<!--Menu for page navigation-->
+<nav class="navbar navbar-default">
+    <!--Limit content to center of page-->
+    <div class="container">
+        <!--Show button with 3 bars for menu dropdown when viewport drops below 775px width-->
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        </div>
+
+        <!--when viewport drops below 775px width collapse-->
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <!--List of links to pages user can use-->
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AllProducts.html">All Products</a></li>
+                <!--Dropdown list of links for aisles that go to separate pages for each aisle-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Aisles <span class="caret"></span> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Fruit.html">Fruits</a></li>
+                            <li><a href="Dairy.html">Dairy</a></li>
+                            <li><a href="Deli.html">Deli</a></li>
+                            <li><a href="CleaningSupplies.html">Cleaning Supplies</a></li>
+                        </ul>
+                </li>                    
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+
+            <!--Show link to shopping cart floated on the right of the navbar-->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="ShoppingCart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                
+            </ul>
+        </div>                   
+    </div>        
+</nav>
+
+    <h1>Edit Order Profile</h1>
+    <br/>
+
+    <h3>Edit Information:</h3>
+    <b>Change Name:</b>
+    <input type = "text" id = "name" name = "name" value = "Dominic Llamas">
+    <br/>
+    <br/>
+
+    <b>Change Address:</b>
+    <input type = "text" id = "address" name = "address" value = "domluffy@gmail.com">
+    <br/>
+    <br/>
+
+    <b>Change UserID:</b>
+    <input type = "text" id = "name" name = "name" value = "40175849">
+    <br/>
+    <br/>
+
+    <b>Change Phone Number:</b>
+    <input type = "text" id = "number" name = "number" value = "(438)-123-1738">
+    <br/>
+    <br/>
+    <form action = "">
+        <label><b>Change Delivery Method:</b></label>
+        <select name = "delivery">
+            <option value = "pickup">Pickup</option>
+            <option value = "delivery">Delivery</option>
+        </select>
+    </form>
+    <br/>
+    <br/>
+
+    <center><table id="editCart">
+        <label>
+           <h3>Cart #0000001: Dominic Llamas (UserID: 40175849)</h3>
+        </label>
+
+        <tr>
+            <td> </td>
+            <td></td>
+            <td><i><h4>Product</h4></i></td>
+            <td><i><h4>Quantity</h4></i></td>
+            <td><i><h4>Price</h4></i></td>
+        </tr>
+
+
+        <tr>
+            <td id = "Button"><input type = "checkbox" name = "Select" value = "Orange"> </td>
+            <td><center><img src = "images/Orange.jpg"
+                alt = "Orange" width = "100" height = "100"></center></td>
+            <td><h5>Orange</h5></td>
+            <td>
+                <div class='value-button' id='decrease' value='Decrease Value'>
+                    <span class='glyphicon glyphicon-minus'></span>
+                </div>                            
+                <input type='text' name='quantity' id='1' value='3'>
+                <div class='value-button' id='increase'  value='Increase Value'>
+                    <span class='glyphicon glyphicon-plus'></span>
+                </div> 
+            </td>
+            <td><h5>$0.99</h5></td>
+        </tr>
+
+        <tr>
+            <td id = "Button"><input type = "checkbox" name = "Select" value = "Kiwi"></td>
+            <td><center><img src = "images/Kiwis.jpg"
+                alt = "Kiwi" width = "100" height = "100"></center></td>
+            <td><h5>Kiwi</h5></td>
+            <td>
+                <div class='value-button' id='decrease' value='Decrease Value'>
+                    <span class='glyphicon glyphicon-minus'></span>
+                </div>                            
+                <input type='text' name='quantity' id='1' value='5'>
+                <div class='value-button' id='increase'  value='Increase Value'>
+                    <span class='glyphicon glyphicon-plus'></span>
+                </div> 
+            </td>
+            <td><h5>$0.99</h5></td>
+        </tr>
+
+        <tr>
+            <td id = "Button"><input type = "checkbox" name = "Select" value = "Apple"></td>
+            <td><center><img src = "images/apple.jpg"
+                alt = "Apple" width = "100" height = "100"></center></td>
+            <td><h5>Apple</h5></td>
+            <td>
+                <div class='value-button' id='decrease' value='Decrease Value'>
+                    <span class='glyphicon glyphicon-minus'></span>
+                </div>                            
+                <input type='text' name='quantity' id='1' value='2'>
+                <div class='value-button' id='increase'  value='Increase Value'>
+                    <span class='glyphicon glyphicon-plus'></span>
+                </div> 
+            </td>
+            <td><h5>$1.00</h5></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <b>Subtotal:</b> $9.92
+                <br/>
+                <b>Taxe Rate:</b> %15.00
+                <br/>
+                <b>Taxe:</b> $1.49
+                <br/>
+                <b>Shipping:</b>
+                <br/>
+                <b>Total:</b> $11.41
+            </td>
+        </tr>
+    </table></center>
+    <br/>
+    <br/>
+    <br/>
+
+    <center><input type = "button" value = "Save"/></center>
+    <br/>
+    <br/>
+    <br/>
+    
+
+</body>

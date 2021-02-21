@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+<link rel = "stylesheet" href="css/site.css">
+
+    </head>
+
+<body style="margin-top: -20px;">
+<!--Top header for logo and user tools-->
+<nav class="navbar navbar-inverse">
+    <!--Allow content to span entire page-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Hole Foods <span><img src="images/logo.png" alt="logo.png" style="height: 1.5em;"></span></a>
+
+            <!--Show user icon as button for dropdown when viewport drops below 775px width-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#commonHeader">
+                    <span class="glyphicon glyphicon-user" style="color:white;"></span>
+            </button>                
+        </div>
+
+        <!--Show on right but when viewport drops below 775px width collapse-->
+        <div class="collapse navbar-collapse" id="commonHeader">
+            <ul class="nav navbar-nav navbar-right">                
+                <li><a href='signup.html'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>
+                <li><a href='login.html'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>                       
+            </ul>
+        </div>                   
+    </div>        
+</nav>
+
+<!--Menu for page navigation-->
+<nav class="navbar navbar-default">
+    <!--Limit content to center of page-->
+    <div class="container">
+        <!--Show button with 3 bars for menu dropdown when viewport drops below 775px width-->
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        </div>
+
+        <!--when viewport drops below 775px width collapse-->
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <!--List of links to pages user can use-->
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AllProducts.html">All Products</a></li>
+                <!--Dropdown list of links for aisles that go to separate pages for each aisle-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Aisles <span class="caret"></span> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Fruit.html">Fruits</a></li>
+                            <li><a href="Dairy.html">Dairy</a></li>
+                            <li><a href="Deli.html">Deli</a></li>
+                            <li><a href="CleaningSupplies.html">Cleaning Supplies</a></li>
+                        </ul>
+                </li>                    
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+
+            <!--Show link to shopping cart floated on the right of the navbar-->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="ShoppingCart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                
+            </ul>
+        </div>                   
+    </div>        
+</nav>
+<div class="page-container">
+    <main>
+<form>
+<h4>Edit/Add product page</h4>
+<h1>Edit/Add Product</h1>
+    <br/>
+    <br/>
+    <h5>Product Name:</h5>
+    <input  type = "text" id = "productname" name = "product name" placeholder="Product Name">
+    <br/>
+    <br/>
+    <h5>Product ID:</h5>
+    <input  type = "text" id = "productID" name = "productID" placeholder="Product ID">
+    <br/>
+    <br/>
+    <h5>Inventory: </h5>
+    <h6 id = "shift"><i>Quantity</i></h6>
+    <input type = "text" id = "Inventoryoption" placeholder="Enter Quantity">
+    <h6 id = "shift"><i>Product Weight</i></h6>
+    <input type = "text" id = "Inventoryoption" placeholder="Enter Weight">
+    <br/>
+    <br/>
+    <h5>Price:</h5>
+    <input type = "text" id = "price" placeholder="Enter a price">
+    <br/>
+    <br/>
+    <h5 >Image:</h5>
+    <h6 id = "shift"><i>Would you like to add an image?</i></h7>
+        <input type = "radio">Yes</input>
+        <input type = "radio">No</input>
+        <h5>Product description</h5> 
+        <textarea id = "textarea" ></textarea>
+        <br/>
+        <br/>
+        <button type = "button" id = "shift">Save</button>
+    </form>
+    </main>
+    </div>
+</body>
+
+
+</html>
